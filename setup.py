@@ -15,7 +15,7 @@ config = {
     'author_email': 'f.ludwig@greyrook.com',
     'url': 'https://github.com/FlorianLudwig/rwuser',
     
-    'install_requires': ['pytest', 'perm', 'fpt'],
+    'install_requires': ['pytest', 'perm', 'fpt', 'rwdb', 'tornado'],
     'packages': ['rwuser'],
     'entry_points': {
         'console_scripts': [
@@ -25,8 +25,6 @@ config = {
     'license=': "Apache Software License 2.0",
     'classifiers': [
         'License :: OSI Approved :: Apache Software License',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython',
