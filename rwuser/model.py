@@ -33,9 +33,6 @@ class User(rwdb.Document, perm.UserBase):
             chars = [random.choice(string.printable) for x in range(32)]
             self.salt = ''.join(chars)
 
-        if isinstance(self.salt, tornado.util.unicode_type):
-            self.salt = self.salt.encode('utf-8')
-
         pw = sha256(pw).hexdigest()
         ret = sha256((pw + self.salt).encode('utf-8')).hexdigest().encode('utf-8')
         for i in range(1328):
